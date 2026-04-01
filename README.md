@@ -1,59 +1,58 @@
-# Mastertech Documentation
+## What is MindStone?
+MindStone is a free open-source alternative solution to [Obsidian Publish](https://obsidian.md/publish)
 
-This is the documentation vault for [Mastertech](https://master-tech.app) — the PCL technician tool.
+Here how it look like once published, checkout [demo version](https://mindstone.tuancao.me/) here:
 
-## Viewing This Documentation
+![](public/images/CleanShot%202022-04-20%20at%2008.34.17@2x.png)
 
-This vault is designed for [Obsidian](https://obsidian.md). Open the `Mastertech-Docs` folder as an Obsidian vault to get:
-- Full wiki-link navigation between pages
-- Graph view showing how all topics connect
-- Proper rendering of the `[[wikilink]]` format
+This website include a published version of default Obsidian Help vault, See it in action here 
 
-## Quick Start
+**MindStone features:**
 
-Start here: **[0. Table of Contents](0.%20Table%20of%20Contents.md)**
+-  ✅ **Drop-in** support for (default) **Obsidian Vault** 
+-  ✅ `[[Wiki Link]]` built-in support
+-  ✅ **Folder-base** navigation side bar
+-  ✅ Backlink support out of the box
+-  ✅ Interactive Graph view 
+-  ✅ **Easy to deploy** to Netlify, Vercel...
 
-## Structure
+## Getting started
+### Run on your local machine
 
-```
-Mastertech-Docs/
-├── 0. Table of Contents.md     ← Start here
-├── 1. Getting Started.md
-├── 2. Views and Layout.md
-├── 3. TUR Sheet.md
-├── 4. Task Boards.md
-└── Tabs/
-    ├── (Desktop-only tabs)
-    │   ├── File Browser.md
-    │   ├── Scripts.md
-    │   ├── System Information.md
-    │   ├── Resource Monitor.md
-    │   ├── Part Order.md
-    │   ├── Minidump Analysis.md
-    │   ├── Websockets.md
-    │   ├── Downloads.md
-    │   ├── Bug Tracker.md
-    │   └── Quality Check.md
-    └── (Shared tabs - desktop + web)
-        ├── My Tasks.md
-        ├── Store Tasks.md
-        ├── Completed Tasks.md
-        ├── Task Audit.md
-        ├── Sales Tracker.md
-        ├── KOTH.md
-        ├── Inventory.md
-        ├── Threads.md
-        ├── AI.md
-        ├── Web Console.md
-        ├── Admin Console.md
-        ├── Database Editor.md
-        ├── Query Editor.md
-        ├── Logs.md
-        ├── Plugins.md
-        ├── My Tools.md
-        └── Create Prestashop Order.md
-```
+Steps to run it on your local machine:
+1. Clone this [Github repo](https://github.com/TuanManhCao/digital-garden)
+2. Install [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) package manager 
+3. Copy all of your **markdown** file (`.md` only) and folder to `/posts/` **except** `/posts/index.md` file
+4. Copy all of your images from your Obsidian Vault to `/public/images/` folder 
+5. Go to root folder of your project, run `yarn && yarn run dev`
+6. Open this link in your browser http://localhost:3000/ 
 
-## Download
+If you prefer video content have a look at my 📺 [walk through video](https://youtu.be/7_SmWA-_Wx8)
 
-Latest executable: [master-tech.app](https://master-tech.app)
+### Publish to the internet
+
+Setup environment (with Netlify)
+1. Create your Github account and clone [my repository](https://github.com/TuanManhCao/digital-garden)
+2. Create Netlify account and follow [this instruction](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/) 
+
+
+Your normal workflow for publishing content, after initial setup is:
+1. Simply writing your content in Obisidian (or your favourite Markdown editor)
+2. Commit your changes and Push it to your Github repo
+
+If you prefer video content, watch my 📺 [walk through video](https://youtu.be/n8QDO6l64aw) here 
+
+## Future development 
+
+These are just some basic features for MindStone v1, many more are coming (if I find enough of interest and this will probably a premium/paid option):
+- 🎯 Obsidian, Notion, VSCode Plugin 
+- 🎯 Page Preview (like Obsidian Core plugin)
+- 🎯 Andy Sliding pane
+- 🎯 Full text search with `Cmd + K`
+- 🎯 Infinite canvas for browsing through notes and connections
+
+### Some know issues
+This an early version of MindStone, which mean there are bugs and issues. Below are some known issues, that I plan to work on:
+- Graphview does not load when clicking on side-bar or click node on graphview, browser reload will refresh it state
+- Graph view layout and interaction is still very rough. More UI/UX improvements are needed.
+- Transclusion is not working yet.
